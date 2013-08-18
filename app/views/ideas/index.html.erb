@@ -1,0 +1,37 @@
+<div class="idea-listing">
+
+<div class="page-header">
+  <h1>Your Ideas <small>Currently <%= @ideas.count %></small></h1>
+</div>
+
+<div class="row">
+
+<% @ideas.each do |idea| %>
+
+<div class="col-lg-4">
+<div class="media idea">
+
+    <a class="pull-left" href="#">
+      <img class="media-object" src="" alt="">
+    </a>
+
+    <div class="media-body">
+      <h4 class="media-heading title"><%= link_to idea.title, idea %></h4>
+      <p class="desc"><%= idea.pitch %></p>
+    </div>
+
+</div>
+</div>
+
+<% end %>
+
+<div class="col-lg-4">
+
+  <div class="new">
+    <%= link_to 'Create New Idea', new_idea_path %>
+  </div>
+
+</div>
+
+</div>
+</div>

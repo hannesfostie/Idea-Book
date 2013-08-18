@@ -1,0 +1,53 @@
+// Place all the styles related to the ideas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.idea-listing{
+	margin: 0;
+	padding: 0;
+}
+
+.page-title{
+	text-align: center;
+}
+
+/* IDEA INFORMATION */
+
+	.idea-listing .idea{
+		width: 100%;
+		margin: 20px 0;
+		background: #f7f7f7;
+		padding: 0;
+		border-radius: 4px;
+		border:1px solid rgba(0,0,0,0.1);
+	}
+
+	.idea-listing .idea .title{
+		background: #fff;
+		margin-bottom: 20px;
+		padding: 15px;
+		border-bottom: 1px solid #CCC;
+	}
+
+	.idea-listing .idea .desc{
+		padding: 0 15px;
+		margin-bottom: 20px;
+	}
+
+		/* NEW IDEA */
+
+		.idea-listing .new{
+			display: inline-block;
+			width: 100%;
+			margin: 20px 0;
+			background: #f7f7f7;
+			padding: 10%;
+			text-align: center;
+			border-radius: 4px;
+			border:1px solid #ccc;
+		}
+
+		.idea-listing .new a{
+			color: #444;
+			font-weight: bold;
+		}
