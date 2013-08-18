@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyString
+  url: MyString
+  project_start: 2013-08-18
+  project_end: 2013-08-18
+
+two:
+  name: MyString
+  description: MyString
+  url: MyString
+  project_start: 2013-08-18
+  project_end: 2013-08-18
