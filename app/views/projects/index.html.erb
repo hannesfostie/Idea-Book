@@ -1,31 +1,38 @@
-<h1>Listing projects</h1>
+<div class="idea-listing">
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Url</th>
-    <th>Project start</th>
-    <th>Project end</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="page-header">
+  <h1>Your Projects <small>Currently <%= @projects.count %></small></h1>
+</div>
+
+<div class="row">
 
 <% @projects.each do |project| %>
-  <tr>
-    <td><%= project.name %></td>
-    <td><%= project.description %></td>
-    <td><%= project.url %></td>
-    <td><%= project.project_start %></td>
-    <td><%= project.project_end %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+<div class="col-lg-4">
+<div class="media idea">
+
+    <a class="pull-left" href="#">
+      <img class="media-object" src="" alt="">
+    </a>
+
+    <div class="media-body">
+      <h4 class="media-heading title"><%= link_to project.name, Project %></h4>
+      <p class="desc"><%= project.description %></p>
+      <p class="desc"><strong><%= project.project_start %> to <%= project.project_end %></strong></p>
+    </div>
+
+</div>
+</div>
+
 <% end %>
-</table>
 
-<br />
+<div class="col-lg-4">
 
-<%= link_to 'New Project', new_project_path %>
+  <div class="new">
+    <%= link_to 'Create New Project', new_project_path %>
+  </div>
+
+</div>
+
+</div>
+</div>
