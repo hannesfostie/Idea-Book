@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130818213807) do
+ActiveRecord::Schema.define(:version => 20130822080630) do
 
   create_table "ideas", :force => true do |t|
     t.string   "title"
@@ -19,7 +19,10 @@ ActiveRecord::Schema.define(:version => 20130818213807) do
     t.string   "pitch"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "project_id"
   end
+
+  add_index "ideas", ["project_id"], :name => "index_ideas_on_project_id"
 
   create_table "projects", :force => true do |t|
     t.string   "name"
@@ -29,6 +32,9 @@ ActiveRecord::Schema.define(:version => 20130818213807) do
     t.date     "project_end"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "project_id"
   end
+
+  add_index "projects", ["project_id"], :name => "index_projects_on_project_id"
 
 end
