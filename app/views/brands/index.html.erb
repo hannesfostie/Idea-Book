@@ -1,0 +1,37 @@
+<div class="idea-listing">
+
+<div class="page-header">
+  <h1>Brands <small>Currently <%= @brands.count %></small></h1>
+</div>
+
+<div class="row">
+
+<% @brands.each do |brand| %>
+
+<div class="span4">
+<div class="media idea">
+
+    <a class="pull-left" href="#">
+      <img class="media-object" src="" alt="">
+    </a>
+
+    <div class="media-body">
+      <h4 class="media-heading title"><%= link_to brand.name, brand %></h4>
+      <p class="desc"><%= brand.description %></p>
+    </div>
+
+</div>
+</div>
+
+<% end %>
+
+<div class="span4">
+
+  <div class="new">
+    <%= link_to 'Create New Brand', new_brand_path %>
+  </div>
+
+</div>
+
+</div>
+</div>

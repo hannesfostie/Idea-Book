@@ -1,8 +1,11 @@
 IdeaBook::Application.routes.draw do
+  resources :brands
+
+
   resources :projects
   resources :ideas
 
-root :to => "projects#index"
+root :to => "brands#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

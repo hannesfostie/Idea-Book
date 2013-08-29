@@ -1,0 +1,32 @@
+<div class="idea-listing">
+
+<div class="page-header">
+  <h1><%= @brand.name %><small> Currently <%= @brand.projects.count %> Projects</small></h1>
+</div>
+
+<div class="row">
+
+<% @brand.projects.each do |project| %>
+
+<div class="span4">
+<div class="media idea">
+
+    <a class="pull-left" href="#">
+      <img class="media-object" src="" alt="">
+    </a>
+
+    <div class="media-body">
+      <h4 class="media-heading title"><%= link_to project.name, project %></h4>
+      <p class="desc"><%= project.description %></p>
+    </div>
+
+</div>
+</div>
+
+<% end %>
+
+</div>
+</div>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
