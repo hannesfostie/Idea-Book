@@ -38,6 +38,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    country_select (1.2.0)
     erubis (2.7.0)
     excon (0.23.0)
     execjs (1.4.0)
@@ -124,6 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  country_select
   heroku
   jquery-rails
   pg
