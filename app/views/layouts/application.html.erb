@@ -15,7 +15,9 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Idea Book</a>
     <ul class="nav">
+      <li><%= link_to 'Agencies', agencies_path %></li>
       <li><%= link_to 'Brands', brands_path %></li>
+      <li class="pull-right"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
     </ul>
   </div>
 </div>
