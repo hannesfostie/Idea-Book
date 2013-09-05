@@ -9,6 +9,10 @@ IdeaBook::Application.routes.draw do
     end
   end
 
+  namespace :admin do
+    resources :agencies
+  end
+
   root :to => "brands#index"
 
   devise_scope :user do
