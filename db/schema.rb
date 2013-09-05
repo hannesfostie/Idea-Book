@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130905173810) do
+ActiveRecord::Schema.define(:version => 20130905174251) do
 
   create_table "agencies", :force => true do |t|
     t.string   "name"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20130905173810) do
     t.datetime "updated_at",                             :null => false
     t.integer  "agency_id"
     t.boolean  "admin"
+    t.boolean  "super_user"
   end
 
   add_index "users", ["agency_id"], :name => "index_users_on_agency_id"
