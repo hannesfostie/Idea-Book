@@ -3,18 +3,17 @@ IdeaBook::Application.routes.draw do
 
   resources :agencies
 
+  resources :brands do
+    resources :projects do
+      resources :ideas
+    end
+  end
 
-  resources :brands
+  root :to => "brands#index"
 
-
-  resources :projects
-  resources :ideas
-
-root :to => "brands#index"
-
-devise_scope :user do
-  get "/login" => "devise/sessions#new"
-end
+  devise_scope :user do
+    get "/login" => "devise/sessions#new"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
